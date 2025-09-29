@@ -36,13 +36,14 @@ public class test_stack {
         assertTrue(actual1.contains("pen"));
         assertFalse(actual3.contains("pencil"));
     }
+    @Test
     public void addItemTwoItemsToStackAndPeek() {
-        String actual = StackCollection.addOneElementToStack("earpod");
-        String actual1 = StackCollection.addOneElementToStack("wristwatch");
-        String actual1 = StackCollection.peakStack();
-
-        assertEquals("Spoon",actual);
-        assertEquals("Cups", actual1);
+        Stack<String> actual = StackCollection.addOneElementToStack("earpod");
+        Stack<String> actual1 = StackCollection.addOneElementToStack("wristwatch");
+        String actual2 = StackCollection.peakStack();
+        assertTrue(actual.contains("earpod"));
+        assertTrue(actual.contains("wristwatch"));
+        assertEquals("wristwatch", actual2);
     }
 
 
